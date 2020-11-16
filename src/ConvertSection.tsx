@@ -1,5 +1,6 @@
 import {CurrencySelect, OptionType} from "./CurrencySelect";
 import React, {useCallback, useRef, useState} from "react";
+import { backendApiBaseUrl } from "./apiconfig.json";
 
 const isRequestValid = (amount: string, sourceCurrency: string, destinationCurrency: string) => {
     if (amount === '' || amount === '0')
@@ -11,7 +12,6 @@ const isRequestValid = (amount: string, sourceCurrency: string, destinationCurre
     return sourceCurrency !== destinationCurrency;
 }
 
-export const backendApiBaseUrl = "http://localhost:5001/purplehw-ed218/us-central1/app/api";
 const convertApiUrl = `${backendApiBaseUrl}/convert`;
 
 export interface IConvertSection {

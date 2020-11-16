@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import * as CSS from "csstype";
 import Select from "react-select";
+import { backendApiBaseUrl } from "./apiconfig.json";
 
 export type OptionType = {
     readonly value: string,
@@ -22,7 +23,7 @@ const customStyles = {
     })
 }
 
-const currenciesUrl = 'http://localhost:5001/purplehw-ed218/us-central1/app/api/currencies';
+const currenciesUrl = `${backendApiBaseUrl}/currencies`;
 
 export interface ICurrencySelectDropdownOptions {
     readonly onChange: (e: OptionType) => void;
