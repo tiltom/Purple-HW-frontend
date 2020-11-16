@@ -33,7 +33,7 @@ export const Statistics: React.FC<IStatistics> = ({shouldLoadNewStatistics}) => 
     return (
       <div className="statistics">
           <h2>Statistics</h2>
-          <p>The most converted currency: <b>{mostConverted}</b></p>
+          <p>The most popular destination currency: <b>{mostConverted}</b></p>
           <p>Total USD converted: <b>{totalUsd}</b></p>
           <p>Number of successful converting requests: <b>{numberOfRequests}</b></p>
       </div>
